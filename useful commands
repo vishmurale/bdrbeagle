@@ -1,0 +1,9 @@
+
+ssh debian@192.168.7.2
+password: temppwd
+
+scp -r Beagle/accel_test.py debian@192.168.7.2:~/Beagle
+
+scp -r debian@192.168.7.2:~/Beagle/runcar.py ./
+
+scp -r Beagle debian@192.168.7.2:~/Beagle
