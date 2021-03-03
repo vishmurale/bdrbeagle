@@ -1,0 +1,14 @@
+scp dashboard.py debian@beaglebone.local:~/
+scp gauge.py debian@beaglebone.local:~/
+scp switch.py debian@beaglebone.local:~/
+ssh debian@beaglebone.local
+
+
+
+
+scp dashboard.py switch.py gauge.py  debian@beaglebone.local:~/
+
+scp dashboard.py switch.py gauge.py progress_bar.py debian@beaglebone.local:~/
+
+
+/home/debian/.config/autostart
