@@ -4,6 +4,7 @@ scp switch.py debian@beaglebone.local:~/
 ssh debian@beaglebone.local
 
 
+https://solarianprogrammer.com/2018/12/04/beaglebone-black-sharing-usb-internet-macos/
 
 
 scp dashboard.py switch.py gauge.py  debian@beaglebone.local:~/

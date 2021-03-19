@@ -1,5 +1,5 @@
 import sys
-sys.path.append('../')
+sys.path.append('/home/debian/Beagle_21')
 
 import Display.gauge as gauge 
 import Display.switch as switch 
@@ -33,7 +33,6 @@ left_torque_wheel = progress_bar.ProgBar(canvas, (50, 300), 100, "left_wheel", 1
 right_torque_wheel = progress_bar.ProgBar(canvas, (550, 300), 100, "right_wheel", 150) #center of progress bar
 
 def update_dash():
-    pass
     left_torque_wheel.set_bar(LMC.get_normalized_current())
     right_torque_wheel.set_bar(RMC.get_normalized_current())
     avg_speed = (RMC.get_mph()+LMC.get_mph())/2
@@ -43,5 +42,3 @@ def update_dash():
 
     #TODO UPDATE THIS 
     fuel.moveto(150)
-
-

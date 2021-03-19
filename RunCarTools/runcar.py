@@ -1,5 +1,5 @@
 import sys
-sys.path.append('../')
+sys.path.append('/home/debian/Beagle_21')
 
 from time import sleep
 
@@ -39,20 +39,20 @@ def runcar_loop():
 			speed_avg = float((throt_1+throt_2)/2)
 			speed_avg *= 100
 			
-			if speed_avg > 100 or throt_1 <= 0 or throt_2 <= 0:
+			if speed_avg > 100 or throt_1 < 0 or throt_2 < 0:
 				speed_avg = 0
 	
+			"""
 			if brake.read() == 1:
 				print("BREAKING OVERRIDE") 
 				speed_avg = 0
-	
-			#print(speed_avg) 
-			#print("Brake: ", brake.read())
+			"""
+
 			lain_thrt.set_duty(speed_avg)
 			rain_thrt.set_duty(speed_avg)
 		
 			
-	except KeyboardInterrupt:
+	except:
 		#turn off FRG 
 		print("Stopped") 
 		man_bmc_frg.set(GPIO.LOW)

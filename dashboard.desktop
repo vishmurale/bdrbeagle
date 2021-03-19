@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=python3 draw_box.py
+Exec=python3 /home/debian/Beagle_21/RunCarTools/main.py
 Path=/home/debian
 Name=dashboard
 Type=Application
