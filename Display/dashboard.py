@@ -10,7 +10,7 @@ import random
 
 root=Tk()
 
-# root.attributes("-fullscreen", True) #can comment out if not full screen?
+root.attributes("-fullscreen", True) #can comment out if not full screen?
 canvas=Canvas(root,height=400,width=800)
 canvas.pack()
 

@@ -84,17 +84,17 @@ class SerialMotorController:
     def get_mph(self):
         speed_motor = self.get_speed()
         mph = (speed_motor/4.0)*DIAMETER*math.pi*60*(1.578/100000) # TO CHANGE once tire radius is known
-        return abs(mph) 
+        return int(abs(mph))
     
     def get_current(self):
         curr_actual = self.write_read(CURRENT_ACTUAL_CMD)
         i_act = (curr_actual/self.CURRENT_200PC)*.2*self.CURRENT_DEVICE
-        return abs(i_act)
+        return int(abs(i_act))
     
     def get_normalized_current(self):
         curr_actual = self.write_read(CURRENT_ACTUAL_CMD)
         i_percentage = 200*curr_actual/self.CURRENT_200PC
-        return abs(i_percentage)
+        return int(abs(i_percentage))
     
     
 RMC = SerialMotorController("/dev/ttyUSB0") #TO CONFIRM 0 or 1

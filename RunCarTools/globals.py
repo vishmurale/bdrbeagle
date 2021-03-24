@@ -1,0 +1,1 @@
+MYGLOBAL = 3

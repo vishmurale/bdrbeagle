@@ -1,15 +1,18 @@
 import sys
 sys.path.append('/home/debian/Beagle_21')
 
+from time import sleep 
+for i in range(0,60):
+    print("Loading...",i,"/ 60")
+    sleep(1)
+    
+import subprocess
+subprocess.call(["sh","/home/debian/Beagle_21/run_sudo.sh"])
+
 # from Display.dashboard import root, speedometer
 from runcar import runcar_loop
 from time import sleep
 from Display.dashboard import root, update_dash 
-from time import sleep 
-
-
-import subprocess
-subprocess.call(["sh","./run_sudo.sh"])
 
 while True:
     try: 

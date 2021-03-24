@@ -3,4 +3,5 @@ Exec=python3 /home/debian/Beagle_21/RunCarTools/main.py
 Path=/home/debian
 Name=dashboard
 Type=Application
+Terminal=true
 Version=1.0
