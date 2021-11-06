@@ -5,7 +5,7 @@ from time import sleep
 
 from pins_config import * 
 from Display.dashboard import ignit_button
-
+from torque_vectoring import *
 #overide this if you want to test 
 DEBUG = False 
 TURNED_ON = False 
@@ -47,9 +47,10 @@ def runcar_loop():
 				print("BREAKING OVERRIDE") 
 				speed_avg = 0
 			"""
+			left_weight, right_weight = TorqueVectoring.torque_vector()
 
-			lain_thrt.set_duty(speed_avg)
-			rain_thrt.set_duty(speed_avg)
+			lain_thrt.set_duty(speed_avg * left_weight)
+			rain_thrt.set_duty(speed_avg * right_weight)
 		
 			
 	except:
